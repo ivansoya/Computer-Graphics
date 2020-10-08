@@ -103,9 +103,7 @@ namespace Laboratory2CP
             Gl.glVertex3d(0.0, 100.0, 100.0);
             Gl.glColor3d(c, b, a);
             Gl.glVertex3d(0.0, 100.0, 0.0);
-            Gl.glEnd();
 
-            Gl.glBegin(Gl.GL_QUADS);
             Gl.glColor3d(a, b, c);
             Gl.glVertex3d(0.0, 100.0, 0.0);
             Gl.glColor3d(b, c, a);
@@ -114,9 +112,7 @@ namespace Laboratory2CP
             Gl.glVertex3d(100.0, 100.0, 100.0);
             Gl.glColor3d(c, b, a);
             Gl.glVertex3d(100.0, 100.0, 0.0);
-            Gl.glEnd();
 
-            Gl.glBegin(Gl.GL_QUADS);
             Gl.glColor3d(a, b, c);
             Gl.glVertex3d(100.0, 100.0, 0.0);
             Gl.glColor3d(b, c, a);
@@ -125,9 +121,7 @@ namespace Laboratory2CP
             Gl.glVertex3d(100.0, 0.0, 100.0);
             Gl.glColor3d(c, b, a);
             Gl.glVertex3d(100.0, 0.0, 0.0);
-            Gl.glEnd();
 
-            Gl.glBegin(Gl.GL_QUADS);
             Gl.glColor3d(a, b, c);
             Gl.glVertex3d(100.0, 0.0, 0.0);
             Gl.glColor3d(b, c, a);
@@ -136,9 +130,7 @@ namespace Laboratory2CP
             Gl.glVertex3d(0.0, 0.0, 100.0);
             Gl.glColor3d(c, b, a);
             Gl.glVertex3d(0.0, 0.0, 0.0);
-            Gl.glEnd();
 
-            Gl.glBegin(Gl.GL_QUADS);
             Gl.glColor3d(a, b, c);
             Gl.glVertex3d(0.0, 0.0, 0.0);
             Gl.glColor3d(b, c, a);
@@ -147,9 +139,7 @@ namespace Laboratory2CP
             Gl.glVertex3d(100.0, 100.0, 0.0);
             Gl.glColor3d(c, b, a);
             Gl.glVertex3d(0.0, 100.0, 0.0);
-            Gl.glEnd();
 
-            Gl.glBegin(Gl.GL_QUADS);
             Gl.glColor3d(a, b, c);
             Gl.glVertex3d(0.0, 0.0, 100.0);
             Gl.glColor3d(b, c, a);
@@ -161,6 +151,7 @@ namespace Laboratory2CP
             Gl.glEnd();
 
             Gl.glFlush();
+
             OGL.Invalidate();
         }
 
