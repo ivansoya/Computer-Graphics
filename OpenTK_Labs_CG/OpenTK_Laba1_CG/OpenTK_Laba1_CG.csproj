@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D174876B-ECCD-4DAB-949E-B437A7954900}</ProjectGuid>
+    <ProjectGuid>{E728CB1B-6B9F-4857-BE59-62956E96A756}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OpenTK_Laba1_CG</RootNamespace>
+    <RootNamespace>OpenTK_Labs_CG</RootNamespace>
     <AssemblyName>OpenTK_Laba1_CG</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("OpenTK_Laba1_CG")]
+[assembly: AssemblyTitle("Addition")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OpenTK_Laba1_CG")]
+[assembly: AssemblyProduct("Addition")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("d174876b-eccd-4dab-949e-b437a7954900")]
+[assembly: Guid("8af1c7f0-9a96-4143-b49e-25e36900a4ab")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
