@@ -87,6 +87,54 @@ namespace Addition.Shader
             }
         }
 
+        //Конструктор для 3 шейдерной программы 
+        public Shader(string vertPath, string fragPath, string geomPath)
+        {
+
+            var shaderSource = LoadSource(vertPath);
+            var vertexShader = GL.CreateShader(ShaderType.VertexShader);
+            GL.ShaderSource(vertexShader, shaderSource);
+            CompileShader(vertexShader);
+
+            shaderSource = LoadSource(fragPath);
+            var fragmentShader = GL.CreateShader(ShaderType.FragmentShader);
+            GL.ShaderSource(fragmentShader, shaderSource);
+            CompileShader(fragmentShader);
+
+            shaderSource = LoadSource(geomPath);
+            var geometryShader = GL.CreateShader(ShaderType.GeometryShader);
+            GL.ShaderSource(geometryShader, shaderSource);
+            CompileShader(geometryShader);
+
+            // These two shaders must then be merged into a shader program, which can then be used by OpenGL.
+            // To do this, create a program...
+            Handle = GL.CreateProgram();
+
+            // Attach both shaders...
+            GL.AttachShader(Handle, vertexShader);
+            GL.AttachShader(Handle, fragmentShader);
+            GL.AttachShader(Handle, geometryShader);
+
+            // And then link them together.
+            LinkProgram(Handle);
+
+            // When the shader program is linked, it no longer needs the individual shaders attacked to it; the compiled code is copied into the shader program.
+            // Detach them, and then delete them.
+            GL.DetachShader(Handle, vertexShader);
+            GL.DetachShader(Handle, fragmentShader);
+            GL.DetachShader(Handle, geometryShader);
+            GL.DeleteShader(fragmentShader);
+            GL.DeleteShader(vertexShader);
+            GL.DeleteShader(geometryShader);
+
+            // The shader is now ready to go, but first, we're going to cache all the shader uniform locations.
+            // Querying this from the shader is very slow, so we do it once on initialization and reuse those values
+            // later.
+
+            // First, we have to get the number of active uniforms in the shader.
+            GL.GetProgram(Handle, GetProgramParameterName.ActiveUniforms, out var numberOfUniforms);
+        }
+
         private static void CompileShader(int shader)
         {
             // Try to compile the shader
@@ -155,7 +203,7 @@ namespace Addition.Shader
         public void SetInt(string name, int data)
         {
             GL.UseProgram(Handle);
-            GL.Uniform1(_uniformLocations[name], data);
+            GL.Uniform1(GL.GetUniformLocation(Handle, name), data);
         }
 
         /// <summary>
@@ -166,7 +214,13 @@ namespace Addition.Shader
         public void SetFloat(string name, float data)
         {
             GL.UseProgram(Handle);
-            GL.Uniform1(_uniformLocations[name], data);
+            GL.Uniform1(GL.GetUniformLocation(Handle, name), data);
+        }
+
+        public void SetBool(string name, bool data)
+        {
+            GL.UseProgram(Handle);
+            GL.Uniform1(GL.GetUniformLocation(Handle, name), data ? 1 : 0 );
         }
 
         /// <summary>
@@ -182,8 +236,9 @@ namespace Addition.Shader
         public void SetMatrix4(string name, Matrix4 data)
         {
             GL.UseProgram(Handle);
-            GL.UniformMatrix4(_uniformLocations[name], true, ref data);
+            GL.UniformMatrix4(GL.GetUniformLocation(Handle, name), true, ref data);
         }
+
 
         /// <summary>
         /// Set a uniform Vector3 on this shader.
@@ -193,7 +248,7 @@ namespace Addition.Shader
         public void SetVector3(string name, Vector3 data)
         {
             GL.UseProgram(Handle);
-            GL.Uniform3(_uniformLocations[name], data);
+            GL.Uniform3(GL.GetUniformLocation(Handle, name), data);
         }
     }
 }

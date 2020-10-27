@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_Laba2_CG", "OpenTK_L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addition", "Addition\Addition.csproj", "{8AF1C7F0-9A96-4143-B49E-25E36900A4AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_Laba3_CG", "OpenTK_Laba3_CG\OpenTK_Laba3_CG.csproj", "{F63230A7-D90D-4DE3-BAF9-62EF74C57161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_Laba4_CG", "OpenTK_Laba4_CG\OpenTK_Laba4_CG.csproj", "{DDF234A2-0E9F-4A97-888F-41DEFC4E7332}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8AF1C7F0-9A96-4143-B49E-25E36900A4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AF1C7F0-9A96-4143-B49E-25E36900A4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AF1C7F0-9A96-4143-B49E-25E36900A4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63230A7-D90D-4DE3-BAF9-62EF74C57161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63230A7-D90D-4DE3-BAF9-62EF74C57161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63230A7-D90D-4DE3-BAF9-62EF74C57161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63230A7-D90D-4DE3-BAF9-62EF74C57161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDF234A2-0E9F-4A97-888F-41DEFC4E7332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF234A2-0E9F-4A97-888F-41DEFC4E7332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF234A2-0E9F-4A97-888F-41DEFC4E7332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF234A2-0E9F-4A97-888F-41DEFC4E7332}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
